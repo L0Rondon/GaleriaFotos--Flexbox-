@@ -61,27 +61,37 @@ nav ul li:hover .dropdown-content {
 
 /* Container da galeria usando Flexbox */
 .gallery-container {
-    display: flex; /* Ativa o Flexbox */
-    justify-content: space-around; /* Distribui os itens com espaço ao redor */
-    flex-wrap: wrap; /* Permite que os itens quebrem linha se não couberem */
-    padding: 20px;
-  }
-  
-  /* Cada item da galeria */
-  .gallery-item {
-    margin: 10px;
-    border: 2px solid rgb(232, 217, 194);
-    border-radius: 5px;
-    overflow: hidden;
-    width: 250px; /* Define uma largura fixa para cada item */
-  }
-  
-  /* Estilos para as imagens */
-  .gallery-item img {
-    width: 100%; /* Garante que a imagem preencha todo o espaço disponível */
-    height: auto; /* Mantém a proporção da imagem */
-  }
+  display: flex; /* Ativa o Flexbox */
+  justify-content: space-around; /* Distribui os itens com espaço ao redor */
+  flex-wrap: wrap; /* Permite que os itens quebrem linha se não couberem */
+  padding: 20px;
+  width: 100%;
+  margin: auto; /*coloca o container para o meio automaticamente*/
+}
+.gallery-container:hover .gallery-item{
+  opacity: .5;
+}
+.gallery-container .gallery-item:hover {
+  opacity: 1
+}
+/* Cada item da galeria */
+.gallery-item {
+  margin: 10px;
+  border: 2px solid rgb(232, 217, 194);
+  border-radius: 5px;
+  overflow: hidden;
+  width: 250px; /* Define uma largura fixa para cada item */
+  transition: all .3s;
+}
+.gallery-item:hover{
+  transform: translateY(-20px)
+}
 
+/* Estilos para as imagens */
+.gallery-item img {
+  width: 100%; /* Garante que a imagem preencha todo o espaço disponível */
+  height: auto; /* Mantém a proporção da imagem */
+}
 
 /* Estilo do footer */
 footer {
